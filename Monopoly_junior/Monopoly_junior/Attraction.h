@@ -16,5 +16,7 @@ public:
 	int getPrix();
 	bool getOccupe();
 	void acheter(Joueur joueur);	
+	void changerProprietaire(Joueur joueur);
+
 };
 
