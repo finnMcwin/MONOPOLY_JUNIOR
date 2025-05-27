@@ -1,0 +1,18 @@
+# Fichiers et dossiers de Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.ncb
+*.opendb
+*.log
+
+# Fichiers de build
+Debug/
+Release/
+*.exe
+*.obj
+*.pdb
+
+# Dossiers système
+.DS_Store
+Thumbs.db
