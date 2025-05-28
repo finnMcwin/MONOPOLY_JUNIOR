@@ -3,11 +3,13 @@
 class Case
 {
 protected: 
-	int position; 
+	int position ; 
 
 public : 
+	Case(int position);
+	Case();
 
 	int getPosition() const;
-	void setPosition(int postion);
+	void setPosition(int newPostion);
 };
 

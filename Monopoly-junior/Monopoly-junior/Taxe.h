@@ -10,7 +10,7 @@ private :
 public : 
 	Taxe(int prix, int position);
 
-	int getPrix();
+	int getPrix() const;
 	void payer(Joueur joueur);
 
 };
