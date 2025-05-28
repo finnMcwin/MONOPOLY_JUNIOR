@@ -7,6 +7,7 @@ protected:
 
 public : 
 
-	int getPosition();
+	int getPosition() const;
+	void setPosition(int postion);
 };
 

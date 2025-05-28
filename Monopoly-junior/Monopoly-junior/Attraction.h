@@ -3,7 +3,7 @@
 #include "Joueur.h"
 #include "Case.h"
 
-class Attraction : private Case
+class Attraction : public Case
 {
 private:
 	int prix;
