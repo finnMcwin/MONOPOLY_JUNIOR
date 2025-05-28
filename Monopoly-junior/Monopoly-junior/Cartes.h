@@ -11,7 +11,8 @@ public:
 	Cartes(Cartes* previousCarte, Cartes* nextCarte); 
 
 	Cartes* getPreviousCarte() const; 
-	Cartes* getNextCarte() const; 
+	Cartes* getNextCarte() const;
+	int nbCartes();
 	void setPreviousCarte(Cartes carte); 
 	void setNextCarte(Cartes carte); 
 	void standGratuitOrange();
@@ -26,11 +27,8 @@ public:
 	void vaCafe();
 	void vaCaseDepart();
 	void vaBallet();
-	void vaFeuDartifice();
-	void trainBleu();
-	void trainVert();
-	void trainRouge();
-	void trainJaune();
+	void vaFeuArtifice();
+	void train();
 
 };
 
