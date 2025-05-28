@@ -1,7 +1,8 @@
 #pragma once
 #include "Joueur.h"
+#include "Case.h"
 
-class Attraction
+class Attraction : private Case
 {
 private:
 	int prix;
@@ -10,10 +11,11 @@ private:
 
 
 public:
-	Attraction(int prix, bool occupe, Joueur proprietaire);
+	Attraction(int prix, bool occupe, Joueur proprietaire, int position);
 
 	int getPrix() const;
 	bool getOccupe() const;
 	void acheter(Joueur joueur);
+	void changerProprietaire(Joueur joueur);
 };
 

@@ -9,9 +9,10 @@ private:
 	int argent;
 	int stand;
 	//std::vector <Case> AttractionJoueur;
+	int position; 
 
 public:
-	Joueur(std::string name, int argent, int stand);
+	Joueur(std::string name, int argent, int stand, int position );
 
 	void avancer(int nbCase);
 	void allerA(int position);
