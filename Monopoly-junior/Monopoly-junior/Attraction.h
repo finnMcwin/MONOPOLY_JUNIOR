@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Joueur.h"
 #include "Case.h"
 
@@ -8,10 +9,12 @@ private:
 	int prix;
 	bool occupe;
 	Joueur proprietaire;
+	std::string couleur;
+
 
 
 public:
-	Attraction(int prix, bool occupe, Joueur proprietaire, int position);
+	Attraction(int prix, bool occupe, Joueur proprietaire, int position, std::string couleur);
 
 	int getPrix() const;
 	bool getOccupe() const;

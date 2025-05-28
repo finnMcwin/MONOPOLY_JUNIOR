@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Monopoly-junior"
+    "\\Monopoly-junior",
+    "\\Monopoly-junior\\Monopoly-junior"
   ],
-  "SelectedNode": "\\Monopoly-junior\\Monopoly-junior.sln",
+  "SelectedNode": "\\Monopoly-junior\\Monopoly-junior\\Cartes.h",
   "PreviewInSolutionExplorer": false
 }
