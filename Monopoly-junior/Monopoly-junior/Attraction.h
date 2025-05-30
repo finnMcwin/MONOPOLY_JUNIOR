@@ -8,17 +8,18 @@ class Attraction : public Case
 private:
 	int prix;
 	bool occupe;
-	Joueur proprietaire;
+	Joueur* proprietaire = nullptr;
 	std::string couleur;
 
 
 
 public:
-	Attraction(int prix, bool occupe, Joueur proprietaire, int position, std::string couleur);
+	Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur);
 
 	int getPrix() const;
 	bool getOccupe() const;
-	void acheter(Joueur joueur);
-	void changerProprietaire(Joueur joueur);
+	void acheter(Joueur* joueur);
+	void changerProprietaire(Joueur* joueur);
+	void visite(Joueur* visiteur); 
 };
 

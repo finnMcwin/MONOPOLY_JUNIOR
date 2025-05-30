@@ -1,7 +1,7 @@
 #include "Attraction.h"
 #include <iostream>
 
-Attraction::Attraction(int prix, bool occupe, Joueur proprietaire, int position, std::string couleur) 
+Attraction::Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur) 
 	:prix(prix), occupe(occupe), proprietaire(proprietaire), couleur(couleur)
 {
 	setPosition(position); 
@@ -16,18 +16,27 @@ bool Attraction::getOccupe() const {
 }
 
 
-void Attraction::acheter(Joueur joueur) {
-	if (joueur.getArgent() < prix) {
+void Attraction::acheter(Joueur* joueur) {
+	if (joueur->getArgent() < prix) {
 		std::cout << "Vous etes trop pauvre pour cette attraction" << std::endl;
+	}
+	else if (joueur->getStand() <= 0) {
+		std::cout << "Vous avez trop d'attractions" << std::endl; 
 	}
 	else {
 		proprietaire = joueur;
 		occupe = true;
-		joueur.enleverArgent(prix);
-		joueur.enleverStand();
+		joueur->enleverArgent(prix);
+		joueur->enleverStand();
+		std::cout << "Transaction effectuée avec succes ! " << std::endl;
 	}
 }
 
-void Attraction::changerProprietaire(Joueur joueur) {
+void Attraction::changerProprietaire(Joueur* joueur) {
 	proprietaire = joueur;
+}
+
+void Attraction::visite(Joueur* visiteur) {
+	visiteur->enleverArgent(prix);
+	proprietaire->gagnerArgent(prix);
 }
