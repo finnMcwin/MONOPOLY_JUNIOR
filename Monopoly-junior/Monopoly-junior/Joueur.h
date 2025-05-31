@@ -1,7 +1,8 @@
 #pragma once
 #include <String>
 #include <vector>
-#include "Attraction.h"
+
+class Attraction;
 
 class Joueur
 {
@@ -9,7 +10,7 @@ private:
 	std::string name;
 	int argent;
 	int stand;
-	std::vector <Attraction> attractionsJoueur;
+	//std::vector <Attraction*> attractionsJoueur;
 	int position; 
 
 public:
@@ -22,7 +23,7 @@ public:
 	void enleverArgent(int prix); 
 	void enleverStand(); 
 	int getStand() const; 
-	void newAttraction(Attraction attraction); 
+	//void newAttraction(Attraction* attraction); 
 	void gagnerArgent(int prix);
 
 };

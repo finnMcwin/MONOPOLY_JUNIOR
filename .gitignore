@@ -16,3 +16,4 @@ Release/
 # Dossiers système
 .DS_Store
 Thumbs.db
+/Monopoly-junior/Monopoly-junior/PlateauDeJeu.cpp

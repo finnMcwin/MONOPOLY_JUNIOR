@@ -3,60 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Cartes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Cartes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Attraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Joueur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Case.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Joueur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\ListeCarte.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\ListeCarte.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\PlateauDeJeu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\PlateauDeJeu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Taxe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Attraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Case.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Case.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Taxe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Attraction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Joueur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Cartes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Cartes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\ListeCarte.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\ListeCarte.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Joueur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PetitTrain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\PetitTrain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Taxe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PetitTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\PetitTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0FAAAE30-667F-4E16-A388-B8F32B53CD16}|Monopoly-junior\\Monopoly-junior.vcxproj|solutionrelative:Monopoly-junior\\Taxe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,23 +70,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Joueur.cpp",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Joueur.cpp",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp",
-              "RelativeToolTip": "Monopoly-junior\\Joueur.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlateauDeJeu.cpp",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.cpp",
+              "RelativeDocumentMoniker": "Monopoly-junior\\PlateauDeJeu.cpp",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.cpp",
+              "RelativeToolTip": "Monopoly-junior\\PlateauDeJeu.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T15:18:41.263Z"
+              "WhenOpened": "2025-05-30T21:15:45.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
+              "Title": "PlateauDeJeu.h",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.h",
+              "RelativeDocumentMoniker": "Monopoly-junior\\PlateauDeJeu.h",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.h",
+              "RelativeToolTip": "Monopoly-junior\\PlateauDeJeu.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T13:02:48.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Attraction.cpp",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Attraction.cpp",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp",
+              "RelativeToolTip": "Monopoly-junior\\Attraction.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-28T14:13:47.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Attraction.h",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.h",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Attraction.h",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.h",
+              "RelativeToolTip": "Monopoly-junior\\Attraction.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T12:29:34.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "PetitTrain.cpp",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PetitTrain.cpp",
               "RelativeDocumentMoniker": "Monopoly-junior\\PetitTrain.cpp",
@@ -94,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PetitTrain.h",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PetitTrain.h",
               "RelativeDocumentMoniker": "Monopoly-junior\\PetitTrain.h",
@@ -106,68 +150,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "Taxe.h",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Taxe.h",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h",
+              "RelativeToolTip": "Monopoly-junior\\Taxe.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T12:36:26.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Taxe.cpp",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.cpp",
               "RelativeDocumentMoniker": "Monopoly-junior\\Taxe.cpp",
               "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.cpp",
               "RelativeToolTip": "Monopoly-junior\\Taxe.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T14:52:56.778Z"
+              "WhenOpened": "2025-05-28T14:52:56.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Case.cpp",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.cpp",
               "RelativeDocumentMoniker": "Monopoly-junior\\Case.cpp",
               "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.cpp",
               "RelativeToolTip": "Monopoly-junior\\Case.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T14:32:21.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Attraction.cpp",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Attraction.cpp",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.cpp",
-              "RelativeToolTip": "Monopoly-junior\\Attraction.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T14:13:47.497Z",
+              "WhenOpened": "2025-05-28T14:32:21.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "Case.h",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Case.h",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h",
+              "RelativeToolTip": "Monopoly-junior\\Case.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T12:30:18.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\main.cpp",
               "RelativeDocumentMoniker": "Monopoly-junior\\main.cpp",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\main.cpp",
-              "RelativeToolTip": "Monopoly-junior\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\main.cpp*",
+              "RelativeToolTip": "Monopoly-junior\\main.cpp*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T13:15:24.733Z"
+              "WhenOpened": "2025-05-28T13:15:24.733Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlateauDeJeu.h",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.h",
-              "RelativeDocumentMoniker": "Monopoly-junior\\PlateauDeJeu.h",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\PlateauDeJeu.h",
-              "RelativeToolTip": "Monopoly-junior\\PlateauDeJeu.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T13:02:48.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ListeCarte.h",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\ListeCarte.h",
               "RelativeDocumentMoniker": "Monopoly-junior\\ListeCarte.h",
@@ -175,11 +223,38 @@
               "RelativeToolTip": "Monopoly-junior\\ListeCarte.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T12:57:17.682Z"
+              "WhenOpened": "2025-05-28T12:57:17.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "Joueur.h",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Joueur.h",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h",
+              "RelativeToolTip": "Monopoly-junior\\Joueur.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T12:29:24.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Joueur.cpp",
+              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp",
+              "RelativeDocumentMoniker": "Monopoly-junior\\Joueur.cpp",
+              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.cpp",
+              "RelativeToolTip": "Monopoly-junior\\Joueur.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-28T15:18:41.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Cartes.h",
               "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Cartes.h",
               "RelativeDocumentMoniker": "Monopoly-junior\\Cartes.h",
@@ -189,54 +264,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-28T12:48:30.351Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Taxe.h",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Taxe.h",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Taxe.h",
-              "RelativeToolTip": "Monopoly-junior\\Taxe.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T12:36:26.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Attraction.h",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.h",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Attraction.h",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Attraction.h",
-              "RelativeToolTip": "Monopoly-junior\\Attraction.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T12:29:34.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Case.h",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Case.h",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Case.h",
-              "RelativeToolTip": "Monopoly-junior\\Case.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T12:30:18.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Joueur.h",
-              "DocumentMoniker": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h",
-              "RelativeDocumentMoniker": "Monopoly-junior\\Joueur.h",
-              "ToolTip": "C:\\Users\\cassa\\OneDrive\\Documents\\GitHub\\MONOPOLY-TP\\Monopoly-junior\\Monopoly-junior\\Joueur.h",
-              "RelativeToolTip": "Monopoly-junior\\Joueur.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-28T12:29:24.375Z"
             }
           ]
         },

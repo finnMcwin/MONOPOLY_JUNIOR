@@ -1,6 +1,5 @@
 #include "Joueur.h"
 
-
 Joueur::Joueur(std::string name, int argent, int stand, int position) 
 	:name(name), argent(argent), stand(stand), position(position)
 {
@@ -35,9 +34,12 @@ int Joueur::getStand() const {
 	return stand; 
 }
 
-void Joueur::newAttraction(Attraction attraction) {
+/*
+void Joueur::newAttraction(Attraction* attraction) {
 	attractionsJoueur.push_back(attraction);
 }
+*/
+
 
 void Joueur::gagnerArgent(int prix) {
 	argent += prix; 

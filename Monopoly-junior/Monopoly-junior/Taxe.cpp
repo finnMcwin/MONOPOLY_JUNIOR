@@ -1,10 +1,12 @@
 #include "Taxe.h"
 #include <iostream>
+#include "Joueur.h"
 
-Taxe::Taxe(int prix, int position) 
+Taxe::Taxe(int prix, int position, std::string name) 
 	:prix(prix)
 {
 	setPosition(position); 
+	setName(name);
 }
 
 
@@ -12,11 +14,8 @@ int Taxe::getPrix() const {
 	return prix; 
 }
 
-void Taxe::payer(Joueur joueur) {
-	if (joueur.getArgent() < prix) {
-		std::cout << "Vous etes trop pauvre" << std::endl; 
-	}
-	else {
-		joueur.enleverArgent(prix); 
-	}
+void Taxe::payer(Joueur* joueur) {
+	
+	joueur->gagnerArgent(prix); 
+	
 }

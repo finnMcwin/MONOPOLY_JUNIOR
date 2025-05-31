@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
-#include "Joueur.h"
 #include "Case.h"
+
+class Joueur; 
 
 class Attraction : public Case
 {
@@ -14,12 +15,13 @@ private:
 
 
 public:
-	Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur);
+	Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur, std::string name);
 
 	int getPrix() const;
 	bool getOccupe() const;
 	void acheter(Joueur* joueur);
 	void changerProprietaire(Joueur* joueur);
-	void visite(Joueur* visiteur); 
+	void visite(Joueur* visiteur);
+	Joueur* getProprio() const { return proprietaire; };
 };
 

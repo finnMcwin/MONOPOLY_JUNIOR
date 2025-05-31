@@ -1,10 +1,12 @@
 #include "Attraction.h"
 #include <iostream>
+#include "Joueur.h"
 
-Attraction::Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur) 
+Attraction::Attraction(int prix, bool occupe, Joueur* proprietaire, int position, std::string couleur, std::string name) 
 	:prix(prix), occupe(occupe), proprietaire(proprietaire), couleur(couleur)
 {
 	setPosition(position); 
+	setName(name);
 }
 
 int Attraction::getPrix() const {
@@ -37,6 +39,7 @@ void Attraction::changerProprietaire(Joueur* joueur) {
 }
 
 void Attraction::visite(Joueur* visiteur) {
+	std::cout << std::endl << "Cette attraction est deja occupe par " << proprietaire->getName() << std::endl << "Vous lui devez : " << prix << " euros" << std::endl;
 	visiteur->enleverArgent(prix);
 	proprietaire->gagnerArgent(prix);
 }
