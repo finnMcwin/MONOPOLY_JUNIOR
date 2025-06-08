@@ -25,5 +25,7 @@ public:
 	int getStand() const; 
 	//void newAttraction(Attraction* attraction); 
 	void gagnerArgent(int prix);
+	void iniJoueur(int nbJoueur, int numJoueur); 
+	int getPosition() const; 
 
 };
