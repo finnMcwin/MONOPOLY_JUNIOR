@@ -10,6 +10,7 @@ protected:
 	std::string name; 
 
 public : 
+
 	Case(int position, std::string name);
 	Case();
 

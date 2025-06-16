@@ -36,8 +36,8 @@ private:
 
     void initialiserCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre) {
         ajouterCarte("Allez au grand huit", [&]() {
-                joueurActif->allerA(30);
-                plateau->effetCase(30, joueurActif, argentCentre);
+            joueurActif->allerA(30);
+            plateau->effetCase(30, joueurActif, argentCentre);
             });
 
         ajouterCarte("Va sur la case Depart", [&]() {
@@ -80,7 +80,23 @@ private:
             plateau->effetCase(29, joueurActif, argentCentre);
             });
 
-
+        ajouterCarteStandGratuit("orange", plateau, joueurActif);
+        ajouterCarteStandGratuit("rouge", plateau, joueurActif);
+        ajouterCarteStandGratuit("rose", plateau, joueurActif);
+        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif);
+        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
+        ajouterCarteStandGratuit("vert", plateau, joueurActif);
+        ajouterCarteStandGratuit("violet", plateau, joueurActif);
+        ajouterCarteStandGratuit("orange", plateau, joueurActif);
+        ajouterCarteStandGratuit("rouge", plateau, joueurActif);
+        ajouterCarteStandGratuit("rose", plateau, joueurActif);
+        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif);
+        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
+        ajouterCarteStandGratuit("vert", plateau, joueurActif);
+        ajouterCarteStandGratuit("violet", plateau, joueurActif);
     }
 
 public:
@@ -100,6 +116,46 @@ public:
             delete aSupprimer;
         }
         delete tete;
+    }
+
+    void ajouterCarteStandGratuit(const std::string& couleur, PlateauDeJeu* plateau, Joueur* joueurActif) {
+        ajouterCarte("Stand gratuit " + couleur, [=]() {
+            Case* case1 = nullptr;
+            Case* case2 = nullptr;
+
+            for (int i = 0; i < 32; ++i) {
+                if (plateau->getCase(i)->getCouleur() == couleur) {
+                    if (!case1)
+                        case1 = plateau->getCase(i);
+                    else {
+                        case2 = plateau->getCase(i);
+                        break;
+                    }
+                }
+            }
+
+            Joueur* proprio1 = case1->getProprio();
+            Joueur* proprio2 = case2->getProprio();
+
+            if (!proprio1) {
+                case1->setProprio(joueurActif);
+                std::cout << "Stand gratuit posé sur " << case1->getName() << std::endl;
+            }
+            else if (!proprio2) {
+                case2->setProprio(joueurActif);
+                std::cout << "Stand gratuit posé sur " << case2->getName() << std::endl;
+            }
+            else if (proprio1 != joueurActif && proprio2 != joueurActif && proprio1 != proprio2) {
+                Joueur* aRemplacer = (proprio1->getArgent() >= proprio2->getArgent()) ? proprio1 : proprio2;
+                Case* cible = (aRemplacer == proprio1) ? case1 : case2;
+                cible->setProprio(joueurActif);
+                std::cout << "Stand adverse remplacé sur " << cible->getName() << std::endl;
+            }
+            else {
+                std::cout << "Impossible de poser un stand " << couleur << ", nouvelle carte tirée." << std::endl;
+                tirerCarte();
+            }
+            });
     }
 
     void ajouterCarte(const std::string& message, std::function<void()> effet) {
