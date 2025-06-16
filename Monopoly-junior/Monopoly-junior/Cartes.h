@@ -148,7 +148,7 @@ public:
             }
             else if (proprio1 != joueurActif && proprio2 != joueurActif && proprio1 != proprio2) {
                 Joueur* aRemplacer = (proprio1->getArgent() >= proprio2->getArgent()) ? proprio1 : proprio2;
-                Attraction* cible = (aRemplacer == proprio1) ? case1 : case2;
+                Case* cible = (aRemplacer == proprio1) ? case1 : case2;
                 cible->changerProprietaire(joueurActif);
                 std::cout << "Stand adverse remplacé sur " << cible->getName() << std::endl;
             }
