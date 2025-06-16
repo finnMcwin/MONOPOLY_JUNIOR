@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 #include <functional>
+#include "Case.h"
+#include "joueur.h"
+#include "PlateauDeJeu.h"
 
 class Carte {
 public:
@@ -31,32 +34,62 @@ private:
     int* argentJoueur; // pointeur vers l'argent du joueur
     int* positionJoueur;
 
-    void initialiserCartes() {
-        ajouterCarte("Avancez à la case départ", [&]() {
-            *positionJoueur = 0;
-            std::cout << "Vous retournez à la case départ." << std::endl;
+    void initialiserCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre) {
+        ajouterCarte("Allez au grand huit", [&]() {
+                joueurActif->allerA(30);
+                plateau->effetCase(30, joueurActif, argentCentre);
             });
 
-        ajouterCarte("Recevez 100€", [&]() {
-            *argentJoueur += 100;
-            std::cout << "Vous recevez 100€. Solde : " << *argentJoueur << "€" << std::endl;
+        ajouterCarte("Va sur la case Depart", [&]() {
+            joueurActif->allerA(0);
+            plateau->effetCase(0, joueurActif, argentCentre);
             });
 
-        ajouterCarte("Payez une amende de 50€", [&]() {
-            *argentJoueur -= 50;
-            std::cout << "Vous payez 50€. Solde : " << *argentJoueur << "€" << std::endl;
+        ajouterCarte("Va sur la case Ballet des Dauphins", [&]() {
+            joueurActif->allerA(24);
+            plateau->effetCase(24, joueurActif, argentCentre);
             });
 
-        ajouterCarte("Allez en prison", [&]() {
-            *positionJoueur = 10;
-            std::cout << "Direction prison ! Position : " << *positionJoueur << std::endl;
+        ajouterCarte("Va sur la case Aller au Cafe", [&]() {
+            joueurActif->allerA(26);
+            plateau->effetCase(26, joueurActif, argentCentre);
             });
+
+        ajouterCarte("Va sur la case Feu d'Artifice", [&]() {
+            joueurActif->allerA(8);
+            plateau->effetCase(8, joueurActif, argentCentre);
+            });
+
+        ajouterCarte("Prend le Petit Train Jaune", [&]() {
+            joueurActif->allerA(5);
+            plateau->effetCase(5, joueurActif, argentCentre);
+            });
+
+        ajouterCarte("Prend le Petit Train Vert", [&]() {
+            joueurActif->allerA(13);
+            plateau->effetCase(13, joueurActif, argentCentre);
+            });
+
+        ajouterCarte("Prend le Petit Train Bleu", [&]() {
+            joueurActif->allerA(21);
+            plateau->effetCase(21, joueurActif, argentCentre);
+            });
+
+        ajouterCarte("Prend le Petit Train Rouge", [&]() {
+            joueurActif->allerA(29);
+            plateau->effetCase(29, joueurActif, argentCentre);
+            });
+
+
     }
 
 public:
-    TasDeCartes(int* argent, int* position) : tete(nullptr), argentJoueur(argent), positionJoueur(position) {
-        initialiserCartes(); // les cartes sont ajoutées ici
+    TasDeCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre, int* argent, int* position)
+        : tete(nullptr), argentJoueur(argent), positionJoueur(position)
+    {
+        initialiserCartes(joueurActif, plateau, argentCentre);
     }
+
 
     ~TasDeCartes() {
         if (!tete) return;

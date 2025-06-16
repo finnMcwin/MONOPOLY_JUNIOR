@@ -131,7 +131,6 @@
     <ClInclude Include="Cartes.h" />
     <ClInclude Include="Case.h" />
     <ClInclude Include="Joueur.h" />
-    <ClInclude Include="ListeCarte.h" />
     <ClInclude Include="PetitTrain.h" />
     <ClInclude Include="PlateauDeJeu.h" />
     <ClInclude Include="Taxe.h" />
@@ -141,7 +140,6 @@
     <ClCompile Include="Cartes.cpp" />
     <ClCompile Include="Case.cpp" />
     <ClCompile Include="Joueur.cpp" />
-    <ClCompile Include="ListeCarte.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PetitTrain.cpp" />
     <ClCompile Include="PlateauDeJeu.cpp" />
