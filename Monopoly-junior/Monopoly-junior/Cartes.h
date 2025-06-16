@@ -6,6 +6,7 @@
 #include "Case.h"
 #include "joueur.h"
 #include "PlateauDeJeu.h"
+#include "Attraction.h"
 
 class Carte {
 public:
@@ -138,17 +139,17 @@ public:
             Joueur* proprio2 = case2->getProprio();
 
             if (!proprio1) {
-                case1->setProprio(joueurActif);
+                case1->acheter(joueurActif);
                 std::cout << "Stand gratuit posé sur " << case1->getName() << std::endl;
             }
             else if (!proprio2) {
-                case2->setProprio(joueurActif);
+                case2->acheter(joueurActif);
                 std::cout << "Stand gratuit posé sur " << case2->getName() << std::endl;
             }
             else if (proprio1 != joueurActif && proprio2 != joueurActif && proprio1 != proprio2) {
                 Joueur* aRemplacer = (proprio1->getArgent() >= proprio2->getArgent()) ? proprio1 : proprio2;
-                Case* cible = (aRemplacer == proprio1) ? case1 : case2;
-                cible->setProprio(joueurActif);
+                Attraction* cible = (aRemplacer == proprio1) ? case1 : case2;
+                cible->changerProprietaire(joueurActif);
                 std::cout << "Stand adverse remplacé sur " << cible->getName() << std::endl;
             }
             else {
