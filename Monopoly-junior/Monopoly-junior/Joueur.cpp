@@ -1,4 +1,5 @@
 #include "Joueur.h"
+#include <iostream>
 
 Joueur::Joueur(std::string name, int argent, int stand, int position) 
 	:name(name), argent(argent), stand(stand), position(position)
@@ -43,4 +44,23 @@ void Joueur::newAttraction(Attraction* attraction) {
 
 void Joueur::gagnerArgent(int prix) {
 	argent += prix; 
+}
+
+void Joueur::iniJoueur(int nbJoueur, int numJoueur) {
+	std::cout << std::endl << "Veuillez rentrer le nom du joueur " << numJoueur << std::endl;
+	std::cin >> name; 
+
+	if (nbJoueur == 2) {
+		stand = 15;
+	}
+	else {
+		stand = 10;
+	}
+	argent = 31; 
+
+	std::cout << std::endl;
+}
+
+int Joueur::getPosition() const {
+	return position;
 }

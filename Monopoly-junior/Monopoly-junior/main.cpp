@@ -5,6 +5,7 @@
 #include "Attraction.h"
 #include "PlateauDeJeu.h"
 #include <iostream>
+#include <limits> 
 
 int rollDice(); 
 
@@ -22,7 +23,7 @@ int main() {
 	Case* Chance3 = new Case(9, "Chance");
 	Case* Cafe = new Case(10, "Cafe");
 	Attraction* Manege = new Attraction(2, false, nullptr, 11, "rose", "Manege");
-	Attraction* Pedalose = new Attraction(2, false, nullptr, 12, "rose", "Pedalos");
+	Attraction* Pedalos = new Attraction(2, false, nullptr, 12, "rose", "Pedalos");
 	Case* PetitTrainVert = new Case(13, "Petit Train Vert"); 
 	Attraction* TobogganAquatique = new Attraction(3, false, nullptr, 14, "orange", "Toboggan Aquatique");
 	Attraction* MiniGolf = new Attraction(3, false, nullptr, 15, "orange", "Mini golf");
@@ -47,9 +48,169 @@ int main() {
 	Plateau.setCase(Depart);
 	Plateau.setCase(Chance1);
 	Plateau.setCase(JeuDeBallons);
+	Plateau.setCase(BarbePapa);
+	Plateau.setCase(Chance2);
+	Plateau.setCase(PetitTrainJaune);
+	Plateau.setCase(TheatreMarionette);
+	Plateau.setCase(SpectacleMagie);
+	Plateau.setCase(FeuArtifice);
+	Plateau.setCase(Chance3);
+	Plateau.setCase(Cafe);
+	Plateau.setCase(Manege);
+	Plateau.setCase(Pedalos);
+	Plateau.setCase(PetitTrainVert);
+	Plateau.setCase(TobogganAquatique);
+	Plateau.setCase(MiniGolf);
+	Plateau.setCase(Fortune);
+	Plateau.setCase(Chance4);
+	Plateau.setCase(JeuVideo);
+	Plateau.setCase(MaisonHantee);
+	Plateau.setCase(Chance5);
+	Plateau.setCase(PetitTrainBleu);
+	Plateau.setCase(PromenadeHelico);
+	Plateau.setCase(PromenadePoney);
+	Plateau.setCase(BalletDauphin);
+	Plateau.setCase(Chance6);
+	Plateau.setCase(AllerCafe);
+	Plateau.setCase(AutoToponneuse);
+	Plateau.setCase(GrandeRoue);
+	Plateau.setCase(PetitTrainRouge); 
+	Plateau.setCase(GrandHuit);
+	Plateau.setCase(MontagneRusse);
 
-	Plateau.getCase(2)->toString();
-	std::cout << Plateau.getCase(2)->getPrix() << std::endl;
+	Joueur* joueur1 = new Joueur(" ", 0, 0, 0);
+	Joueur* joueur2 = new Joueur(" ", 0, 0, 0);
+	Joueur* joueur3 = new Joueur(" ", 0, 0, 0);
+	Joueur* joueur4 = new Joueur(" ", 0, 0, 0);
+	int nbJoueur = 0; 
+
+	std::cout << "Bienvenue dans le Monopoly Junior ! " << std::endl;
+	
+	while (nbJoueur < 2 || nbJoueur>4) {
+		std::cout << "Merci d'indiquer le nombre de joueur souhaitant prendre part à l'aventure " << std::endl;
+		std::cin >> nbJoueur;
+		if (nbJoueur < 2) {
+			std::cout << "Vous devez etre au minimum 2 joueurs" << std::endl;
+		}
+		else if (nbJoueur>4){
+			std::cout << "Vous ne pouvez pas être plus de 4 joueurs" << std::endl;
+		}
+	}
+
+	for (int iniJoueur = 1; iniJoueur <= nbJoueur; iniJoueur++) {
+		if (iniJoueur == 1) {
+			joueur1->iniJoueur(nbJoueur, iniJoueur);
+		}
+		else if (iniJoueur == 2) {
+			joueur2->iniJoueur(nbJoueur, iniJoueur);
+		}
+		else if (iniJoueur == 3) {
+			joueur3->iniJoueur(nbJoueur, iniJoueur);
+		}
+		else if (iniJoueur == 4) {
+			joueur4->iniJoueur(nbJoueur, iniJoueur);
+		}
+	}
+
+	std::cout << "Vous etes maintenant pret pour commencer le monopoly !" << std::endl << "Vous possedez tous un total de 31 euros et ";
+	if (nbJoueur == 2) {
+		std::cout << "15 stands qui vous permettrons d'acquerir des attractions" << std::endl;
+	}
+	else {
+		std::cout << "10 stands qui vous permettrons d'acquerir des attractions" << std::endl;
+	}
+	std::cout << "Que le plus riche gagne !!" << std::endl << std::endl;
+
+	bool jouer = true;
+	int jouerActif = 0; 
+	int argentMilieu = 0;
+	int* argentCentre = &argentMilieu;
+
+	while (jouer) {
+
+		if (jouerActif == 4) {
+			jouerActif = 1; 
+		}
+		else {
+			jouerActif++;
+		}
+
+		if (jouerActif == 1) {
+			std::cout << "C'est a " << joueur1->getName() << " de jouer !" << std::endl; 
+			std::cout << "vous possedez actuellement " << joueur1->getArgent() << "euros et " << joueur1->getStand() << "stands" << std::endl;
+			
+			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.get();
+			
+
+			joueur1->avancer(rollDice());
+			Plateau.effetCase(joueur1->getPosition(), joueur1, argentCentre) ;
+
+			if (joueur1->getArgent() <= 0) {
+				std::cout << std::endl << "Vous etes fauche !" << std::endl;
+				jouer = false;
+			}
+			std::cout << std::endl;
+		}
+
+		else if (jouerActif == 2) {
+			std::cout << "C'est a " << joueur2->getName() << " de jouer !" << std::endl;
+			std::cout << "vous possedez actuellement " << joueur2->getArgent() << "euros et " << joueur2->getStand() << "stands" << std::endl;
+
+			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.get();
+
+
+			joueur2->avancer(rollDice());
+			Plateau.effetCase(joueur2->getPosition(), joueur2, argentCentre);
+
+			if (joueur2->getArgent() <= 0) {
+				std::cout << std::endl << "Vous etes fauche !" << std::endl;
+				jouer = false;
+			}
+			std::cout << std::endl;
+		}
+
+		else if (jouerActif == 3) {
+			std::cout << "C'est a " << joueur3->getName() << " de jouer !" << std::endl;
+			std::cout << "vous possedez actuellement " << joueur3->getArgent() << "euros et " << joueur3->getStand() << "stands" << std::endl;
+
+			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.get();
+
+
+			joueur3->avancer(rollDice());
+			Plateau.effetCase(joueur3->getPosition(), joueur3, argentCentre);
+
+			if (joueur3->getArgent() <= 0) {
+				std::cout << std::endl << "Vous etes fauche !" << std::endl;
+				jouer = false;
+			}
+			std::cout << std::endl;
+		}
+
+		else if (jouerActif == 4) {
+			std::cout << "C'est a " << joueur4->getName() << " de jouer !" << std::endl;
+			std::cout << "vous possedez actuellement " << joueur4->getArgent() << "euros et " << joueur4->getStand() << "stands" << std::endl;
+
+			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.get();
+
+
+			joueur4->avancer(rollDice());
+			Plateau.effetCase(joueur4->getPosition(), joueur4, argentCentre);
+
+			if (joueur4->getArgent() <= 0) {
+				std::cout << std::endl << "Vous etes fauche !" << std::endl;
+				jouer = false;
+			}
+			std::cout << std::endl;
+		}
+	}
 
 	return 0; 
 }
@@ -57,8 +218,9 @@ int main() {
 
 int rollDice() {
 
-	std::srand(std::time(0));
+	std::srand(static_cast<unsigned int>(std::time(0)));
 	int nombre = (std::rand() % 6) + 1;
+	std::cout << "Vous avez obtenu " << nombre << std::endl;
 
 	return nombre; 
 }
