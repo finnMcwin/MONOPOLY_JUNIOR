@@ -1,4 +1,5 @@
 #include "Joueur.h"
+#include "Attraction.h"
 #include <iostream>
 
 Joueur::Joueur(std::string name, int argent, int stand, int position) 
@@ -7,8 +8,17 @@ Joueur::Joueur(std::string name, int argent, int stand, int position)
 
 }
 
+Joueur::~Joueur() {
+	for (Attraction* p : attractionsJoueur) {
+		delete p;
+	}
+}
+
 void Joueur::avancer(int nbCase) {
 	position += nbCase; 
+	if (position > 31) {
+		position = position - 32;
+	}
 }
 
 void Joueur::allerA(int newPosition) {
@@ -35,12 +45,25 @@ int Joueur::getStand() const {
 	return stand; 
 }
 
-/*
+
 void Joueur::newAttraction(Attraction* attraction) {
 	attractionsJoueur.push_back(attraction);
 }
-*/
 
+void Joueur::suppAttraction(Attraction* attraction) {
+	attractionsJoueur.erase(std::remove(attractionsJoueur.begin(), attractionsJoueur.end(), attraction), attractionsJoueur.end());
+}
+
+void Joueur::afficherAttraction() const {
+	std::cout << "Vous possedez : ";
+	for (Attraction* p : attractionsJoueur) {
+		std::cout << p->getName();
+		std::cout << ", ";
+	}
+	std::cout << std::endl << std::endl;
+
+
+}
 
 void Joueur::gagnerArgent(int prix) {
 	argent += prix; 

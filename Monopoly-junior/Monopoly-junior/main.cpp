@@ -5,7 +5,6 @@
 #include "Attraction.h"
 #include "PlateauDeJeu.h"
 #include <iostream>
-#include <limits> 
 #include "ListeCarte.h"
 #include "StandGratuit.h"
 #include "CarteAllerA.h"
@@ -202,6 +201,7 @@ int main() {
 
 	bool jouer = true;
 	char de = 'A'; 
+	char suivant = 'A';
 	int jouerActif = 0; 
 	int argentMilieu = 0;
 	int* argentCentre = &argentMilieu;
@@ -216,12 +216,14 @@ int main() {
 			jouerActif++;
 		}
 		de = 'A';
+		suivant = 'A';
 
 
 		if (jouerActif == 1) {
 			std::cout << std::endl << "------------ C'est a " << joueur1->getName() << " de jouer ! ------------" << std::endl << std::endl; 
 			std::cout << std::endl << "-> Vous possedez actuellement " << joueur1->getArgent() << "euros et " << joueur1->getStand() << "stands" << std::endl;
-			
+			joueur1->afficherAttraction();
+
 			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;			
 			while (de != 'D') {
 				std::cin >> de; 
@@ -242,6 +244,7 @@ int main() {
 		else if (jouerActif == 2) {
 			std::cout << std::endl << "------------ C'est a " << joueur2->getName() << " de jouer ! ------------" << std::endl;
 			std::cout << std::endl << "-> Vous possedez actuellement " << joueur2->getArgent() << "euros et " << joueur2->getStand() << "stands" << std::endl;
+			joueur2->afficherAttraction();
 
 			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
 			while (de != 'D') {
@@ -263,6 +266,7 @@ int main() {
 		else if (jouerActif == 3) {
 			std::cout << std::endl << "------------ C'est a " << joueur3->getName() << " de jouer ! ------------" << std::endl;
 			std::cout << std::endl <<  "-> Vous possedez actuellement " << joueur3->getArgent() << "euros et " << joueur3->getStand() << "stands" << std::endl;
+			joueur3->afficherAttraction();
 
 			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
 			while (de != 'D') {
@@ -285,6 +289,7 @@ int main() {
 		else if (jouerActif == 4) {
 			std::cout << std::endl << "------------ C'est a " << joueur4->getName() << " de jouer ! ------------" << std::endl;
 			std::cout << std::endl << "-> Vous possedez actuellement " << joueur4->getArgent() << "euros et " << joueur4->getStand() << "stands" << std::endl;
+			joueur4->afficherAttraction();
 
 			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
 			while (de != 'D') {
@@ -303,9 +308,54 @@ int main() {
 			std::cout << std::endl;
 		}
 
-		std::this_thread::sleep_for(std::chrono::seconds(3));
+		std::cout << std::endl << "------ Entre S pour passer au joueur suivant ------ " << std::endl;
+		while (suivant != 'S') {
+			std::cin >> suivant;
+		}
 		system("cls");
 	}
+
+	int argentMax = 0; 
+	std::string gagnant;
+	std::string perdant; 
+
+	for (int j = 1; j <= nbJoueur; j++) {
+		if (j == 1) {
+			if (joueur1->getArgent()<=0) {
+				perdant = joueur1->getName();
+			}
+			else if (joueur1->getArgent() > argentMax) {
+				gagnant = joueur1->getName();
+			}
+		}
+		else if (j == 2) {
+			if (joueur2->getArgent() <= 0) {
+				perdant = joueur1->getName();
+			}
+			else if (joueur2->getArgent() > argentMax) {
+				gagnant = joueur1->getName();
+			}
+		}
+		else if (j == 3) {
+			if (joueur3->getArgent() <= 0) {
+				perdant = joueur1->getName();
+			}
+			else if (joueur3->getArgent() > argentMax) {
+				gagnant = joueur1->getName();
+			}
+		}
+		else if (j == 4) {
+			if (joueur4->getArgent() <= 0) {
+				perdant = joueur1->getName();
+			}
+			else if (joueur4->getArgent() > argentMax) {
+				gagnant = joueur1->getName();
+			}
+		}
+	}
+
+	std::cout << std::endl << "Le gagnant est " + gagnant << std::endl << std::endl;
+	std::cout << std::endl << "Le perdant est " + perdant << std::endl << std::endl;
 
 	return 0; 
 }

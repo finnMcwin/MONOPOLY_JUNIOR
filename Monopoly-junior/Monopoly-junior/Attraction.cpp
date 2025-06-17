@@ -30,13 +30,16 @@ void Attraction::acheter(Joueur* joueur) {
 		occupe = true;
 		joueur->enleverArgent(prix);
 		joueur->enleverStand();
+		joueur->newAttraction(this);
 		std::cout << "Transaction effectuee avec succes ! " << std::endl;
 	}
 }
 
 void Attraction::changerProprietaire(Joueur* joueur) {
 	proprietaire->recupStand();
+	proprietaire->suppAttraction(this);
 	joueur->enleverStand();
+	joueur->newAttraction(this);
 	proprietaire = joueur;
 }
 
@@ -54,6 +57,7 @@ void Attraction::setProprio(Joueur* joueur) {
 		proprietaire = joueur;
 		occupe = true;
 		joueur->enleverStand();
+		joueur->newAttraction(this);
 		std::cout << "Vous voila proprietaire d'une nouvelle attraction ! " << std::endl;
 	}
 	

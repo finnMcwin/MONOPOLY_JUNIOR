@@ -10,11 +10,12 @@ private:
 	std::string name;
 	int argent;
 	int stand;
-	//std::vector <Attraction*> attractionsJoueur;
+	std::vector <Attraction*> attractionsJoueur;
 	int position; 
 
 public:
 	Joueur(std::string name, int argent, int stand, int position );
+	~Joueur();
 
 	void avancer(int nbCase);
 	void allerA(int newPosition);
@@ -24,7 +25,9 @@ public:
 	void enleverStand(); 
 	void recupStand() { stand++; };
 	int getStand() const; 
-	//void newAttraction(Attraction* attraction); 
+	void newAttraction(Attraction* attraction); 
+	void suppAttraction(Attraction* attraction);
+	void afficherAttraction() const;
 	void gagnerArgent(int prix);
 	void iniJoueur(int nbJoueur, int numJoueur); 
 	int getPosition() const; 

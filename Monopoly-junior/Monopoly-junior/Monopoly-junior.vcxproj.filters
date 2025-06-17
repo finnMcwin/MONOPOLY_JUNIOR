@@ -30,9 +30,6 @@
     <ClInclude Include="PlateauDeJeu.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="PetitTrain.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="DefCarte.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -63,9 +60,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="PetitTrain.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="DefCarte.cpp">
