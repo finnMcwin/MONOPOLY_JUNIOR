@@ -44,39 +44,42 @@ int main() {
 	Attraction* GrandHuit = new Attraction(5, false, nullptr, 30, "bleuClaire", "Grand Huit");
 	Attraction* MontagneRusse = new Attraction(5, false, nullptr, 31, "bleuClaire", "Montagne Russe");
 
-	PlateauDeJeu Plateau;
-	Plateau.setCase(Depart);
-	Plateau.setCase(Chance1);
-	Plateau.setCase(JeuDeBallons);
-	Plateau.setCase(BarbePapa);
-	Plateau.setCase(Chance2);
-	Plateau.setCase(PetitTrainJaune);
-	Plateau.setCase(TheatreMarionette);
-	Plateau.setCase(SpectacleMagie);
-	Plateau.setCase(FeuArtifice);
-	Plateau.setCase(Chance3);
-	Plateau.setCase(Cafe);
-	Plateau.setCase(Manege);
-	Plateau.setCase(Pedalos);
-	Plateau.setCase(PetitTrainVert);
-	Plateau.setCase(TobogganAquatique);
-	Plateau.setCase(MiniGolf);
-	Plateau.setCase(Fortune);
-	Plateau.setCase(Chance4);
-	Plateau.setCase(JeuVideo);
-	Plateau.setCase(MaisonHantee);
-	Plateau.setCase(Chance5);
-	Plateau.setCase(PetitTrainBleu);
-	Plateau.setCase(PromenadeHelico);
-	Plateau.setCase(PromenadePoney);
-	Plateau.setCase(BalletDauphin);
-	Plateau.setCase(Chance6);
-	Plateau.setCase(AllerCafe);
-	Plateau.setCase(AutoToponneuse);
-	Plateau.setCase(GrandeRoue);
-	Plateau.setCase(PetitTrainRouge); 
-	Plateau.setCase(GrandHuit);
-	Plateau.setCase(MontagneRusse);
+	PlateauDeJeu* Plateau= new PlateauDeJeu;
+	Plateau->setCase(Depart);
+	Plateau->setCase(Chance1);
+	Plateau->setCase(JeuDeBallons);
+	Plateau->setCase(BarbePapa);
+	Plateau->setCase(Chance2);
+	Plateau->setCase(PetitTrainJaune);
+	Plateau->setCase(TheatreMarionette);
+	Plateau->setCase(SpectacleMagie);
+	Plateau->setCase(FeuArtifice);
+	Plateau->setCase(Chance3);
+	Plateau->setCase(Cafe);
+	Plateau->setCase(Manege);
+	Plateau->setCase(Pedalos);
+	Plateau->setCase(PetitTrainVert);
+	Plateau->setCase(TobogganAquatique);
+	Plateau->setCase(MiniGolf);
+	Plateau->setCase(Fortune);
+	Plateau->setCase(Chance4);
+	Plateau->setCase(JeuVideo);
+	Plateau->setCase(MaisonHantee);
+	Plateau->setCase(Chance5);
+	Plateau->setCase(PetitTrainBleu);
+	Plateau->setCase(PromenadeHelico);
+	Plateau->setCase(PromenadePoney);
+	Plateau->setCase(BalletDauphin);
+	Plateau->setCase(Chance6);
+	Plateau->setCase(AllerCafe);
+	Plateau->setCase(AutoToponneuse);
+	Plateau->setCase(GrandeRoue);
+	Plateau->setCase(PetitTrainRouge); 
+	Plateau->setCase(GrandHuit);
+	Plateau->setCase(MontagneRusse);
+
+	
+
 
 	Joueur* joueur1 = new Joueur(" ", 0, 0, 0);
 	Joueur* joueur2 = new Joueur(" ", 0, 0, 0);
@@ -87,13 +90,13 @@ int main() {
 	std::cout << "Bienvenue dans le Monopoly Junior ! " << std::endl;
 	
 	while (nbJoueur < 2 || nbJoueur>4) {
-		std::cout << "Merci d'indiquer le nombre de joueur souhaitant prendre part à l'aventure " << std::endl;
+		std::cout << "Merci d'indiquer le nombre de joueur souhaitant prendre part a l'aventure " << std::endl;
 		std::cin >> nbJoueur;
 		if (nbJoueur < 2) {
 			std::cout << "Vous devez etre au minimum 2 joueurs" << std::endl;
 		}
 		else if (nbJoueur>4){
-			std::cout << "Vous ne pouvez pas être plus de 4 joueurs" << std::endl;
+			std::cout << "Vous ne pouvez pas etre plus de 4 joueurs" << std::endl;
 		}
 	}
 
@@ -126,9 +129,10 @@ int main() {
 	int argentMilieu = 0;
 	int* argentCentre = &argentMilieu;
 
+
 	while (jouer) {
 
-		if (jouerActif == 4) {
+		if (jouerActif == nbJoueur) {
 			jouerActif = 1; 
 		}
 		else {
@@ -139,13 +143,13 @@ int main() {
 			std::cout << "C'est a " << joueur1->getName() << " de jouer !" << std::endl; 
 			std::cout << "vous possedez actuellement " << joueur1->getArgent() << "euros et " << joueur1->getStand() << "stands" << std::endl;
 			
-			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cin.get();
 			
 
 			joueur1->avancer(rollDice());
-			Plateau.effetCase(joueur1->getPosition(), joueur1, argentCentre) ;
+			Plateau->effetCase(joueur1->getPosition(), joueur1, argentCentre) ;
 
 			if (joueur1->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -158,13 +162,13 @@ int main() {
 			std::cout << "C'est a " << joueur2->getName() << " de jouer !" << std::endl;
 			std::cout << "vous possedez actuellement " << joueur2->getArgent() << "euros et " << joueur2->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cin.get();
 
 
 			joueur2->avancer(rollDice());
-			Plateau.effetCase(joueur2->getPosition(), joueur2, argentCentre);
+			Plateau->effetCase(joueur2->getPosition(), joueur2, argentCentre);
 
 			if (joueur2->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -177,13 +181,13 @@ int main() {
 			std::cout << "C'est a " << joueur3->getName() << " de jouer !" << std::endl;
 			std::cout << "vous possedez actuellement " << joueur3->getArgent() << "euros et " << joueur3->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cin.get();
 
 
 			joueur3->avancer(rollDice());
-			Plateau.effetCase(joueur3->getPosition(), joueur3, argentCentre);
+			Plateau->effetCase(joueur3->getPosition(), joueur3, argentCentre);
 
 			if (joueur3->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -196,13 +200,13 @@ int main() {
 			std::cout << "C'est a " << joueur4->getName() << " de jouer !" << std::endl;
 			std::cout << "vous possedez actuellement " << joueur4->getArgent() << "euros et " << joueur4->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entrée pour lancer le dee" << std::endl;
+			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cin.get();
 
 
 			joueur4->avancer(rollDice());
-			Plateau.effetCase(joueur4->getPosition(), joueur4, argentCentre);
+			Plateau->effetCase(joueur4->getPosition(), joueur4, argentCentre);
 
 			if (joueur4->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;

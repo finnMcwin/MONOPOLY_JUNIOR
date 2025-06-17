@@ -22,6 +22,7 @@ public:
 	int getArgent() const;
 	void enleverArgent(int prix); 
 	void enleverStand(); 
+	void recupStand() { stand++; };
 	int getStand() const; 
 	//void newAttraction(Attraction* attraction); 
 	void gagnerArgent(int prix);

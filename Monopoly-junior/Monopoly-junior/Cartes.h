@@ -11,16 +11,16 @@
 class Carte {
 public:
     std::string message;
-    std::function<void()> effet;
+    std::function<void(Joueur*, int*)> effet;
     Carte* suivant;
 
-    Carte(const std::string& msg, std::function<void()> effetAssocie)
+    Carte(const std::string& msg, std::function<void(Joueur*, int*)> effetAssocie)
         : message(msg), effet(effetAssocie), suivant(nullptr) {
     }
 
-    void appliquerEffet() const {
+    void appliquerEffet(Joueur* joueurActif, int* argentCentre) const {
         std::cout << "Carte tirée : " << message << std::endl;
-        effet(); // on exécute l'action spécifique
+        effet(joueurActif, argentCentre); // on exécute l'action spécifique
     }
 };
 
@@ -32,79 +32,77 @@ public:
 class TasDeCartes {
 private:
     Carte* tete;
-    int* argentJoueur; // pointeur vers l'argent du joueur
-    int* positionJoueur;
 
-    void initialiserCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre) {
-        ajouterCarte("Allez au grand huit", [&]() {
+    void initialiserCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre, TasDeCartes* tasDeCartes) {
+        ajouterCarte("Allez au grand huit", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(30);
-            plateau->effetCase(30, joueurActif, argentCentre);
+            plateau->effetCase(30, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Va sur la case Depart", [&]() {
+        ajouterCarte("Va sur la case Depart", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(0);
-            plateau->effetCase(0, joueurActif, argentCentre);
+            plateau->effetCase(0, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Va sur la case Ballet des Dauphins", [&]() {
+        ajouterCarte("Va sur la case Ballet des Dauphins", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(24);
-            plateau->effetCase(24, joueurActif, argentCentre);
+            plateau->effetCase(24, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Va sur la case Aller au Cafe", [&]() {
+        ajouterCarte("Va sur la case Aller au Cafe", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(26);
-            plateau->effetCase(26, joueurActif, argentCentre);
+            plateau->effetCase(26, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Va sur la case Feu d'Artifice", [&]() {
+        ajouterCarte("Va sur la case Feu d'Artifice", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(8);
-            plateau->effetCase(8, joueurActif, argentCentre);
+            plateau->effetCase(8, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Prend le Petit Train Jaune", [&]() {
+        ajouterCarte("Prend le Petit Train Jaune", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(5);
-            plateau->effetCase(5, joueurActif, argentCentre);
+            plateau->effetCase(5, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Prend le Petit Train Vert", [&]() {
+        ajouterCarte("Prend le Petit Train Vert", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(13);
-            plateau->effetCase(13, joueurActif, argentCentre);
+            plateau->effetCase(13, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Prend le Petit Train Bleu", [&]() {
+        ajouterCarte("Prend le Petit Train Bleu", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(21);
-            plateau->effetCase(21, joueurActif, argentCentre);
+            plateau->effetCase(21, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarte("Prend le Petit Train Rouge", [&]() {
+        ajouterCarte("Prend le Petit Train Rouge", [&plateau, &tasDeCartes](Joueur* joueurActif, int* argentCentre) {
             joueurActif->allerA(29);
-            plateau->effetCase(29, joueurActif, argentCentre);
+            plateau->effetCase(29, joueurActif, argentCentre, tasDeCartes);
             });
 
-        ajouterCarteStandGratuit("orange", plateau, joueurActif);
-        ajouterCarteStandGratuit("rouge", plateau, joueurActif);
-        ajouterCarteStandGratuit("rose", plateau, joueurActif);
-        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif);
-        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif);
-        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
-        ajouterCarteStandGratuit("vert", plateau, joueurActif);
-        ajouterCarteStandGratuit("violet", plateau, joueurActif);
-        ajouterCarteStandGratuit("orange", plateau, joueurActif);
-        ajouterCarteStandGratuit("rouge", plateau, joueurActif);
-        ajouterCarteStandGratuit("rose", plateau, joueurActif);
-        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif);
-        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif);
-        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
-        ajouterCarteStandGratuit("jaune", plateau, joueurActif);
-        ajouterCarteStandGratuit("vert", plateau, joueurActif);
-        ajouterCarteStandGratuit("violet", plateau, joueurActif);
+        ajouterCarteStandGratuit("orange", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("rouge", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("rose", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("vert", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("violet", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("orange", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("rouge", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("rose", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("bleu clair", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("bleu foncé", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("jaune", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("vert", plateau, joueurActif, argentCentre);
+        ajouterCarteStandGratuit("violet", plateau, joueurActif, argentCentre);
     }
 
 public:
-    TasDeCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre, int* argent, int* position)
-        : tete(nullptr), argentJoueur(argent), positionJoueur(position)
+    TasDeCartes(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre, TasDeCartes* cartes)
+        : tete(nullptr)
     {
-        initialiserCartes(joueurActif, plateau, argentCentre);
+        initialiserCartes(joueurActif, plateau, argentCentre, cartes);
     }
 
 
@@ -119,15 +117,19 @@ public:
         delete tete;
     }
 
-    void ajouterCarteStandGratuit(const std::string& couleur, PlateauDeJeu* plateau, Joueur* joueurActif) {
-        ajouterCarte("Stand gratuit " + couleur, [=]() {
-            Case* case1 = nullptr;
-            Case* case2 = nullptr;
+    void ajouterCarteStandGratuit(const std::string& couleur, PlateauDeJeu* plateau, Joueur* joueurActif, int* argentCentre) {
+        ajouterCarte("Stand gratuit " + couleur, [&plateau, &couleur, this](Joueur* joueurActif, int* argentCentre) {
+            this->tirerCarte(joueurActif,argentCentre);
+            Case* case1 = new Case(0," ");
+            Case* case2 = new Case(0, " ");
+            bool Testcase1 = true;
 
-            for (int i = 0; i < 32; ++i) {
+            for (int i = 0; i < 32; ++i) {   
                 if (plateau->getCase(i)->getCouleur() == couleur) {
-                    if (!case1)
+                    if (Testcase1) {
                         case1 = plateau->getCase(i);
+                        Testcase1 = false;
+                    }
                     else {
                         case2 = plateau->getCase(i);
                         break;
@@ -154,12 +156,12 @@ public:
             }
             else {
                 std::cout << "Impossible de poser un stand " << couleur << ", nouvelle carte tirée." << std::endl;
-                tirerCarte();
+                tirerCarte(joueurActif, argentCentre);
             }
             });
     }
 
-    void ajouterCarte(const std::string& message, std::function<void()> effet) {
+    void ajouterCarte(const std::string& message, std::function<void(Joueur*, int*)> effet) {
         Carte* nouvelle = new Carte(message, effet);
         if (!tete) {
             tete = nouvelle;
@@ -193,7 +195,7 @@ public:
         tete = cartes[0];
     }
 
-    void tirerCarte() {
+    void tirerCarte(Joueur* joueurActif, int* argentCentre) {
         if (!tete) {
             std::cout << "Le tas est vide." << std::endl;
             return;
@@ -210,6 +212,6 @@ public:
         carteTiree->suivant = tete;
         courant->suivant = carteTiree;
 
-        carteTiree->appliquerEffet();
+        carteTiree->appliquerEffet(joueurActif, argentCentre);
     }
 };

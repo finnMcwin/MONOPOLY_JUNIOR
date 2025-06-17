@@ -19,9 +19,12 @@ public:
 
 	int getPrix() const;
 	bool getOccupe() const;
+	void setProprio(Joueur* joueur);
 	void acheter(Joueur* joueur);
+	std::string getCouleur() const { return couleur; };
 	void changerProprietaire(Joueur* joueur);
 	void visite(Joueur* visiteur);
 	Joueur* getProprio() const { return proprietaire; };
+	
 };
 

@@ -35,6 +35,8 @@ void Attraction::acheter(Joueur* joueur) {
 }
 
 void Attraction::changerProprietaire(Joueur* joueur) {
+	proprietaire->recupStand();
+	joueur->enleverStand();
 	proprietaire = joueur;
 }
 
@@ -42,4 +44,21 @@ void Attraction::visite(Joueur* visiteur) {
 	std::cout << std::endl << "Cette attraction est deja occupe par " << proprietaire->getName() << std::endl << "Vous lui devez : " << prix << " euros" << std::endl;
 	visiteur->enleverArgent(prix);
 	proprietaire->gagnerArgent(prix);
+}
+
+void Attraction::setProprio(Joueur* joueur) {
+	if (joueur->getStand() <= 0) {
+		std::cout << "Vous avez trop d'attractions" << std::endl;
+	}
+	else {
+		proprietaire = joueur;
+		occupe = true;
+		joueur->enleverStand();
+		std::cout << "Vous voila proprietaire d'une nouvelle attraction ! " << std::endl;
+	}
+	
+}
+
+void Attraction::setProprio(Joueur* joueurActif) {
+
 }
