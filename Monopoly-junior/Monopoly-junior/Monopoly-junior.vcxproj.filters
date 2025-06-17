@@ -27,9 +27,6 @@
     <ClInclude Include="Taxe.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Cartes.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="PlateauDeJeu.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -60,9 +57,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Taxe.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Cartes.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="PlateauDeJeu.cpp">

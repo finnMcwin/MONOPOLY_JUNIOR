@@ -11,8 +11,8 @@ private :
 
 
 public : 
-	StandGratuit(std::string couleur, std::string name, DefCarte* nextCarte); 
+	StandGratuit(std::string couleur, std::string name, DefCarte* nextCarte, DefCarte* previousCarte); 
 
-	void effetCarte(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre) override; 
+	void effetCarte(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre, ListeCarte* Cartes) override;
 };
 

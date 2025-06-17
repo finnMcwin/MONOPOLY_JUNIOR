@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClInclude Include="Attraction.h" />
     <ClInclude Include="CarteAllerA.h" />
-    <ClInclude Include="Cartes.h" />
     <ClInclude Include="Case.h" />
     <ClInclude Include="DefCarte.h" />
     <ClInclude Include="Joueur.h" />
@@ -142,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="Attraction.cpp" />
     <ClCompile Include="CarteAllerA.cpp" />
-    <ClCompile Include="Cartes.cpp" />
     <ClCompile Include="Case.cpp" />
     <ClCompile Include="DefCarte.cpp" />
     <ClCompile Include="Joueur.cpp" />

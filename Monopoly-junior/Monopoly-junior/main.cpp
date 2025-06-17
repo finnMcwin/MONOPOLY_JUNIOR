@@ -6,6 +6,14 @@
 #include "PlateauDeJeu.h"
 #include <iostream>
 #include <limits> 
+#include "ListeCarte.h"
+#include "StandGratuit.h"
+#include "CarteAllerA.h"
+#include <vector>
+#include <algorithm> 
+#include <random>
+#include <chrono> 
+#include <thread>
 
 int rollDice(); 
 
@@ -78,7 +86,72 @@ int main() {
 	Plateau->setCase(GrandHuit);
 	Plateau->setCase(MontagneRusse);
 
-	
+
+	StandGratuit* StandGratuitOrange1 = new StandGratuit("orange", "Stand Gratuit Orange", nullptr, nullptr);
+	StandGratuit* StandGratuitOrange2 = new StandGratuit("orange", "Stand Gratuit Orange", nullptr, nullptr);
+	StandGratuit* StandGratuitRouge1 = new StandGratuit("rouge", "Stand Gratuit Rouge", nullptr, nullptr);
+	StandGratuit* StandGratuitRouge2 = new StandGratuit("rouge", "Stand Gratuit Rouge", nullptr, nullptr);
+	StandGratuit* StandGratuitRose1 = new StandGratuit("rose", "Stand Gratuit Rose", nullptr, nullptr);
+	StandGratuit* StandGratuitRose2 = new StandGratuit("rose", "Stand Gratuit Rose", nullptr, nullptr);
+	StandGratuit* StandGratuitBlanc1 = new StandGratuit("blanc", "Stand Gratuit Blanc", nullptr, nullptr);
+	StandGratuit* StandGratuitBlanc2 = new StandGratuit("blanc", "Stand Gratuit Blanc", nullptr, nullptr);
+	StandGratuit* StandGratuitBleuClaire1 = new StandGratuit("bleuClaire", "Stand Gratuit Bleu Claire", nullptr, nullptr);
+	StandGratuit* StandGratuitBleuClaire2 = new StandGratuit("bleuClaire", "Stand Gratuit Bleu Claire", nullptr, nullptr);
+	StandGratuit* StandGratuitBleuFonce = new StandGratuit("bleuFonce", "Stand Gratuit Bleu Fonce", nullptr, nullptr);
+	StandGratuit* StandGratuitJaune1 = new StandGratuit("jaune", "Stand Gratuit Jaune", nullptr, nullptr);
+	StandGratuit* StandGratuitJaune2 = new StandGratuit("jaune", "Stand Gratuit Jaune", nullptr, nullptr);
+	StandGratuit* StandGratuitVert1 = new StandGratuit("vert", "Stand Gratuit Vert", nullptr, nullptr);
+	StandGratuit* StandGratuitVert2 = new StandGratuit("vert", "Stand Gratuit Vert", nullptr, nullptr);
+	CarteAllerA* CarteTobboggan = new CarteAllerA(14, "Va sur le Tobboggan aquatique", nullptr, nullptr);
+	CarteAllerA* CarteGrandHuit = new CarteAllerA(30, "Va sur le Grand Huit", nullptr, nullptr);
+	CarteAllerA* CartePrendreBus = new CarteAllerA(26, "Va sur la case prendre le Bus ", nullptr, nullptr);
+	CarteAllerA* CarteDepart = new CarteAllerA(0, "Va sur la case Depart ", nullptr, nullptr);
+	CarteAllerA* CarteBalletDauphin = new CarteAllerA(24, "Va sur la case Ballet des Dauphins", nullptr, nullptr);
+	CarteAllerA* CarteFeuArtifice = new CarteAllerA(8, "Va sur la case Feu d'Artifice", nullptr, nullptr);
+	CarteAllerA* CartePetitTrainJaune = new CarteAllerA(5, "Va sur la case Petit Train Jaune", nullptr, nullptr);
+	CarteAllerA* CartePetitTrainVert = new CarteAllerA(13, "Va sur la case Petit Train  Vert", nullptr, nullptr);
+	CarteAllerA* CartePetitTrainBleu = new CarteAllerA(21, "Va sur la case Petit Train Bleu", nullptr, nullptr);
+	CarteAllerA* CartePetitTrainRouge = new CarteAllerA(29, "Va sur la case Petit Train Rouge", nullptr, nullptr);
+
+
+	std::vector <DefCarte*> listeProvisoire; 
+	listeProvisoire.push_back(StandGratuitBlanc1);
+	listeProvisoire.push_back(StandGratuitBlanc2);
+	listeProvisoire.push_back(StandGratuitBleuClaire1);
+	listeProvisoire.push_back(StandGratuitBleuClaire2);
+	listeProvisoire.push_back(StandGratuitBleuFonce);
+	listeProvisoire.push_back(StandGratuitJaune1);
+	listeProvisoire.push_back(StandGratuitJaune2);
+	listeProvisoire.push_back(StandGratuitOrange1);
+	listeProvisoire.push_back(StandGratuitOrange2);
+	listeProvisoire.push_back(StandGratuitRose1);
+	listeProvisoire.push_back(StandGratuitRose2);
+	listeProvisoire.push_back(StandGratuitRouge1);
+	listeProvisoire.push_back(StandGratuitRouge2);
+	listeProvisoire.push_back(StandGratuitVert1);
+	listeProvisoire.push_back(StandGratuitVert2);
+	listeProvisoire.push_back(CarteBalletDauphin); 
+	listeProvisoire.push_back(CarteDepart);
+	listeProvisoire.push_back(CarteFeuArtifice);
+	listeProvisoire.push_back(CarteGrandHuit); 
+	listeProvisoire.push_back(CartePetitTrainBleu);
+	listeProvisoire.push_back(CartePetitTrainJaune);
+	listeProvisoire.push_back(CartePetitTrainRouge);
+	listeProvisoire.push_back(CartePetitTrainVert);
+	listeProvisoire.push_back(CartePrendreBus);
+	listeProvisoire.push_back(CarteTobboggan);
+
+	// Melange des Cartes
+
+	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+	std::shuffle(listeProvisoire.begin(), listeProvisoire.end(), std::default_random_engine(seed));
+
+	ListeCarte* piocheCarte = new ListeCarte(); 
+
+	for (std::vector<DefCarte*>::iterator it = listeProvisoire.begin(); it < listeProvisoire.end(); ++it)
+	{
+		piocheCarte->addCarte(*it); 
+	}
 
 
 	Joueur* joueur1 = new Joueur(" ", 0, 0, 0);
@@ -87,7 +160,7 @@ int main() {
 	Joueur* joueur4 = new Joueur(" ", 0, 0, 0);
 	int nbJoueur = 0; 
 
-	std::cout << "Bienvenue dans le Monopoly Junior ! " << std::endl;
+	std::cout << std::endl << "BIENVENUE DANS LE MONOPOLY JUNIOR ! " << std::endl << std::endl;
 	
 	while (nbJoueur < 2 || nbJoueur>4) {
 		std::cout << "Merci d'indiquer le nombre de joueur souhaitant prendre part a l'aventure " << std::endl;
@@ -115,16 +188,20 @@ int main() {
 		}
 	}
 
-	std::cout << "Vous etes maintenant pret pour commencer le monopoly !" << std::endl << "Vous possedez tous un total de 31 euros et ";
+	std::cout << std::endl << "Vous etes maintenant pret pour commencer le monopoly !" << std::endl << "Vous possedez tous un total de 31 euros et ";
 	if (nbJoueur == 2) {
 		std::cout << "15 stands qui vous permettrons d'acquerir des attractions" << std::endl;
 	}
 	else {
 		std::cout << "10 stands qui vous permettrons d'acquerir des attractions" << std::endl;
 	}
-	std::cout << "Que le plus riche gagne !!" << std::endl << std::endl;
+	std::cout << std::endl << "Que le plus riche gagne !!" << std::endl << std::endl;
+	
+	std::this_thread::sleep_for(std::chrono::seconds(3));
+	system("cls");
 
 	bool jouer = true;
+	char de = 'A'; 
 	int jouerActif = 0; 
 	int argentMilieu = 0;
 	int* argentCentre = &argentMilieu;
@@ -138,18 +215,22 @@ int main() {
 		else {
 			jouerActif++;
 		}
+		de = 'A';
+
 
 		if (jouerActif == 1) {
-			std::cout << "C'est a " << joueur1->getName() << " de jouer !" << std::endl; 
-			std::cout << "vous possedez actuellement " << joueur1->getArgent() << "euros et " << joueur1->getStand() << "stands" << std::endl;
+			std::cout << std::endl << "------------ C'est a " << joueur1->getName() << " de jouer ! ------------" << std::endl << std::endl; 
+			std::cout << std::endl << "-> Vous possedez actuellement " << joueur1->getArgent() << "euros et " << joueur1->getStand() << "stands" << std::endl;
 			
-			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cin.get();
-			
+			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;			
+			while (de != 'D') {
+				std::cin >> de; 
+			}
 
 			joueur1->avancer(rollDice());
-			Plateau->effetCase(joueur1->getPosition(), joueur1, argentCentre) ;
+			std::cout << std::endl;
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+			Plateau->effetCase(joueur1->getPosition(), joueur1, argentCentre, piocheCarte) ;
 
 			if (joueur1->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -159,16 +240,18 @@ int main() {
 		}
 
 		else if (jouerActif == 2) {
-			std::cout << "C'est a " << joueur2->getName() << " de jouer !" << std::endl;
-			std::cout << "vous possedez actuellement " << joueur2->getArgent() << "euros et " << joueur2->getStand() << "stands" << std::endl;
+			std::cout << std::endl << "------------ C'est a " << joueur2->getName() << " de jouer ! ------------" << std::endl;
+			std::cout << std::endl << "-> Vous possedez actuellement " << joueur2->getArgent() << "euros et " << joueur2->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cin.get();
-
+			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
+			while (de != 'D') {
+				std::cin >> de;
+			}
 
 			joueur2->avancer(rollDice());
-			Plateau->effetCase(joueur2->getPosition(), joueur2, argentCentre);
+			std::cout << std::endl;
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+			Plateau->effetCase(joueur2->getPosition(), joueur2, argentCentre, piocheCarte);
 
 			if (joueur2->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -178,16 +261,19 @@ int main() {
 		}
 
 		else if (jouerActif == 3) {
-			std::cout << "C'est a " << joueur3->getName() << " de jouer !" << std::endl;
-			std::cout << "vous possedez actuellement " << joueur3->getArgent() << "euros et " << joueur3->getStand() << "stands" << std::endl;
+			std::cout << std::endl << "------------ C'est a " << joueur3->getName() << " de jouer ! ------------" << std::endl;
+			std::cout << std::endl <<  "-> Vous possedez actuellement " << joueur3->getArgent() << "euros et " << joueur3->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cin.get();
+			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
+			while (de != 'D') {
+				std::cin >> de;
+			}
 
 
 			joueur3->avancer(rollDice());
-			Plateau->effetCase(joueur3->getPosition(), joueur3, argentCentre);
+			std::cout << std::endl;
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+			Plateau->effetCase(joueur3->getPosition(), joueur3, argentCentre, piocheCarte);
 
 			if (joueur3->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -197,16 +283,18 @@ int main() {
 		}
 
 		else if (jouerActif == 4) {
-			std::cout << "C'est a " << joueur4->getName() << " de jouer !" << std::endl;
-			std::cout << "vous possedez actuellement " << joueur4->getArgent() << "euros et " << joueur4->getStand() << "stands" << std::endl;
+			std::cout << std::endl << "------------ C'est a " << joueur4->getName() << " de jouer ! ------------" << std::endl;
+			std::cout << std::endl << "-> Vous possedez actuellement " << joueur4->getArgent() << "euros et " << joueur4->getStand() << "stands" << std::endl;
 
-			std::cout << "Appuyer sur Entree pour lancer le dee" << std::endl;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cin.get();
-
+			std::cout << std::endl << "Entre D pour lancer le de " << std::endl;
+			while (de != 'D') {
+				std::cin >> de;
+			}
 
 			joueur4->avancer(rollDice());
-			Plateau->effetCase(joueur4->getPosition(), joueur4, argentCentre);
+			std::cout << std::endl;
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+			Plateau->effetCase(joueur4->getPosition(), joueur4, argentCentre, piocheCarte);
 
 			if (joueur4->getArgent() <= 0) {
 				std::cout << std::endl << "Vous etes fauche !" << std::endl;
@@ -214,6 +302,9 @@ int main() {
 			}
 			std::cout << std::endl;
 		}
+
+		std::this_thread::sleep_for(std::chrono::seconds(3));
+		system("cls");
 	}
 
 	return 0; 

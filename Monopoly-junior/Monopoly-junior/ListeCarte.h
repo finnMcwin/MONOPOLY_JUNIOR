@@ -1,11 +1,12 @@
 #pragma once
 #include "DefCarte.h"
-
+#include "PlateauDeJeu.h"
 
 class ListeCarte
 {
 private : 
 	DefCarte* firstCarte; 
+	DefCarte* lastCarte; 
 	
 	DefCarte* getCarte(int position); 
 
@@ -14,7 +15,8 @@ public:
 	~ListeCarte();
 
 	void addCarte(DefCarte* carte);
-	DefCarte* piocher();
+	void piocher(Joueur* joueurActif, PlateauDeJeu* plateau, int* argentCentre);
+	int size(); 
 
 };
 

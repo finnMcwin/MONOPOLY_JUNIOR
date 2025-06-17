@@ -5,7 +5,8 @@
 #include "Joueur.h"
 #include "Attraction.h"
 #include "Taxe.h"
-#include "Cartes.h"
+
+class ListeCarte; 
 
 class PlateauDeJeu
 {
@@ -18,8 +19,8 @@ private:
 	void caseAllerCafe(Joueur* joueurActif, int position, int* argentCentre);
 	void caseCafe(int position, Joueur* joueurActif); 
 	void caseFortune(int position, Joueur* joueurActif, int* argentCentre);
-	void casePetitTrain(int position, Joueur* joueurActif, int* argentCentre);
-	void caseChance(int position, Joueur* joueurActif, int* argentCentre);
+	void casePetitTrain(int position, Joueur* joueurActif, int* argentCentre, ListeCarte* listeCarte);
+	void caseChance(int position, Joueur* joueurActif, int* argentCentre, ListeCarte* listeCarte);
 	int rollDiceP(); 
 
 public : 
@@ -27,7 +28,7 @@ public :
 
 	void setCase(Case* newCase);
 	
-	void effetCase(int position, Joueur* joueurActif, int* argentCentre);
+	void effetCase(int position, Joueur* joueurActif, int* argentCentre, ListeCarte* listeCarte);
 	Case* getCase(int position);
 
 };

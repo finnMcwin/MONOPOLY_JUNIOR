@@ -30,7 +30,7 @@ void Attraction::acheter(Joueur* joueur) {
 		occupe = true;
 		joueur->enleverArgent(prix);
 		joueur->enleverStand();
-		std::cout << "Transaction effectuée avec succes ! " << std::endl;
+		std::cout << "Transaction effectuee avec succes ! " << std::endl;
 	}
 }
 
@@ -59,6 +59,3 @@ void Attraction::setProprio(Joueur* joueur) {
 	
 }
 
-void Attraction::setProprio(Joueur* joueurActif) {
-
-}
