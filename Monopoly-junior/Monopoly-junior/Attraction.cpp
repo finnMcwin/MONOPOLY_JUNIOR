@@ -20,7 +20,7 @@ bool Attraction::getOccupe() const {
 
 void Attraction::acheter(Joueur* joueur) {
 	if (joueur->getArgent() < prix) {
-		std::cout << "Vous etes trop pauvre pour cette attraction" << std::endl;
+		std::cout << "Cassou : Vous etes trop pauvre pour cette attraction, grosse merde !" << std::endl;
 	}
 	else if (joueur->getStand() <= 0) {
 		std::cout << "Vous avez trop d'attractions" << std::endl; 
